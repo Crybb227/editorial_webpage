@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason's Editorial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.5;
+        }
+        
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        
+        .article {
+            background: #f9f9f9;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #007acc;
+        }
+        
+        .article h2 {
+            color: #007acc;
+            margin-top: 0;
+        }
+        
+        .date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        
+        a {
+            color: #007acc;
+        }
+        
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #666;
+        }
+        
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 2% auto;
+            padding: 30px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 800px;
+            height: 90%;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            right: 15px;
+            top: 10px;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .modal h2 {
+            color: #007acc;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .modal .date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+        
+        .read-more {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        
+        .read-more:hover {
+            color: #005999;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jason's Editorial</h1>
+        <p>Room temperature IQ takes on complex topics</p>
+    </header>
+
+    <main>
+        <article class="article">
+            <h2>The UK's AI Gamble</h2>
+            <div class="date">September 18, 2025</div>
+            <p>Prime Minister Keir Starmer's announcement of a £2 billion investment deal with Nvidia could be a turning point for the UK's role in artificial intelligence.</p>
+            <p>Here we examine the opportunities and risks of the largest tech partnership between the US and the UK.</p>
+            <a href="#" class="read-more" onclick="openModal('article1')">Read more...</a>
+        </article>     
+    </main>
+
+    <!-- Modal for full articles -->
+    <div id="articleModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalContent">
+                <!-- Article content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Jason Murray</p>
+    </footer>
+
+    <script>
+        // Full article content
+        const articles = {
+            article1: {
+                title: "The UK's AI Gamble",
+                date: "September 18, 2025",
+                content: `
+                    <p><em>By Jason Murray<br>
+                    Professor Tucker<br>
+                    
+                    <p>Prime Minister Keir Starmer's announcement of a £2 billion investment deal with Nvidia could be a turning point for the UK's role in artificial intelligence. The agreement is being described as the largest tech partnership between the US and the UK, and it is supposed to boost research and development across London, Oxford, Cambridge, and Manchester. At first glance, this is an exciting opportunity, but it also raises a lot of questions about delivery, sustainability, and fairness.</p>
+
+                    <h3>The Good</h3>
+                    <p>This deal could finally address some of the UK's weaknesses in AI. Researchers and startups have often complained about limited access to powerful computing resources, slow scaling opportunities, and inconsistent infrastructure. The plan is supposed to bring more computing power, more investment, and better connections between universities and entrepreneurs. Including cities outside London, like Manchester, makes the project feel more balanced and less centered on the capital. It also signals that the government is taking AI seriously and wants to position the UK as a global leader.</p>
+
+                    <h3>The Concerns</h3>
+                    <p>At the same time, there are clear risks. Announcing a large sum of money is not the same as making sure it is spent well. The UK has a history of ambitious tech projects that never lived up to expectations. Without proper oversight, this could turn into another flashy headline without real results.</p>
+
+                    <p>Energy use is another issue. Running advanced AI infrastructure is extremely energy-intensive. If energy remains expensive or unreliable in the UK, the project could run into serious cost problems. There are also environmental concerns, since AI supercomputers demand significant cooling and power. If the investment is not paired with a sustainable energy strategy, the long-term costs may outweigh the benefits.</p>
+
+                    <p>There is also the question of who benefits. While the announcement mentions several hubs, the reality is that London, Oxford, and Cambridge already hold most of the power and resources. Smaller universities or independent researchers may not see much support. On top of that, giving one company like Nvidia such a central role could increase dependence on a single corporate partner, which creates risks for control and accountability.</p>
+
+                    <p>Finally, the ethical side of AI cannot be ignored. If this investment is only focused on speed and profit, then issues like bias, misuse, and privacy might be overlooked. Building guardrails and regulations alongside infrastructure is necessary if the UK wants to lead responsibly in AI.</p>
+
+                    <h3>What Comes Next</h3>
+                    <p>The real test will be whether this deal produces measurable results. That means more than just building new data centers. It should include clear goals, such as how many startups are supported, how much computing power is added, and how energy costs are managed. Talent also needs to be prioritized. If the UK does not find ways to attract and keep researchers, then new infrastructure may not reach its full potential.</p>
+
+                    <h3>Final Thoughts</h3>
+                    <p>This deal could be the beginning of a major shift for the UK in the global AI landscape. It shows ambition and sends a strong signal that the government is serious about technology. However, the success of the project will depend on execution, sustainability, and fairness. If those elements are missing, then the £2 billion may end up as another big promise that fails to deliver.</p>
+
+                    <p><em>Source: <a href="https://www.standard.co.uk/news/tech/prime-minister-keir-starmer-london-oxford-cambridge-b1248531.html" target="_blank">The Standard</a></em></p>
+                `
+            }
+            
+        };
+
+        function openModal(articleId) {
+            const modal = document.getElementById('articleModal');
+            const modalContent = document.getElementById('modalContent');
+            const article = articles[articleId];
+            
+            modalContent.innerHTML = `
+                <h2>${article.title}</h2>
+                <div class="date">${article.date}</div>
+                ${article.content}
+            `;
+            
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('articleModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('articleModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
